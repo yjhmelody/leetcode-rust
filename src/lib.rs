@@ -1,7 +1,7 @@
 mod linked_list;
 
-mod two_sum;
 mod add_two_numbers;
-mod remove_duplicates;
 mod max_profit;
+mod remove_duplicates;
 mod rotate_array;
+mod two_sum;

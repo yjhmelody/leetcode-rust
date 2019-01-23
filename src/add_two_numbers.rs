@@ -3,14 +3,17 @@
 use crate::linked_list::ListNode;
 
 // add two link lists by transfer them to vector firstly and then transfer them back to lists.
-pub fn add_two_numbers(l1: Option<Box<ListNode>>, l2: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
+pub fn add_two_numbers(
+    l1: Option<Box<ListNode>>,
+    l2: Option<Box<ListNode>>,
+) -> Option<Box<ListNode>> {
     let mut vec1 = list_to_vec(l1);
     let mut vec2 = list_to_vec(l2);
     let mut vec3 = vec![];
     let mut carry = 0;
     let min_len = vec1.len().min(vec2.len());
     let max_len = vec1.len().max(vec2.len());
-    for i in 0 .. min_len {
+    for i in 0..min_len {
         let mut val = vec1[i] + vec2[i] + carry;
         if val > 9 {
             val -= 10;
@@ -22,13 +25,9 @@ pub fn add_two_numbers(l1: Option<Box<ListNode>>, l2: Option<Box<ListNode>>) -> 
         }
     }
 
-    let rest_vec = if max_len == vec1.len() {
-            vec1
-        } else {
-            vec2
-    };
+    let rest_vec = if max_len == vec1.len() { vec1 } else { vec2 };
 
-    for i in min_len .. max_len {
+    for i in min_len..max_len {
         let mut val = rest_vec[i] + carry;
         if val > 9 {
             val -= 10;
@@ -58,7 +57,7 @@ fn list_to_vec(l: Option<Box<ListNode>>) -> Vec<i32> {
     while list.is_some() {
         match list {
             Some(ref node) => nums.push(node.val),
-            None => {},
+            None => {}
         };
         list = list.unwrap().next;
     }
@@ -87,31 +86,22 @@ mod tests {
             val: 2,
             next: Some(Box::new(ListNode {
                 val: 4,
-                next: Some(Box::new(ListNode {
-                    val: 3,
-                    next: None,
-                }))
-            }))
+                next: Some(Box::new(ListNode { val: 3, next: None })),
+            })),
         }));
         let l2 = Some(Box::new(ListNode {
             val: 5,
             next: Some(Box::new(ListNode {
                 val: 6,
-                next: Some(Box::new(ListNode {
-                    val: 4,
-                    next: None,
-                }))
-            }))
+                next: Some(Box::new(ListNode { val: 4, next: None })),
+            })),
         }));
         let l3 = Some(Box::new(ListNode {
             val: 7,
             next: Some(Box::new(ListNode {
                 val: 0,
-                next: Some(Box::new(ListNode {
-                    val: 8,
-                    next: None,
-                }))
-            }))
+                next: Some(Box::new(ListNode { val: 8, next: None })),
+            })),
         }));
 
         assert_eq!(add_two_numbers(l1, l2), l3);
