@@ -1,3 +1,5 @@
+#![allow(dead_code)]
+
 // eval the diff prices and plus all the postive
 pub fn max_profit(prices: Vec<i32>) -> i32 {
     if prices.len() < 2 {

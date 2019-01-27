@@ -1,3 +1,5 @@
+#![allow(dead_code)]
+
 // rotate array in-place by temp array
 pub fn rotate(nums: &mut Vec<i32>, k: i32) {
     if nums.len() < 2 {

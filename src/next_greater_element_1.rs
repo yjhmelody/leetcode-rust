@@ -1,3 +1,5 @@
+#![allow(dead_code)]
+
 pub fn next_greater_element(nums1: Vec<i32>, nums2: Vec<i32>) -> Vec<i32> {
     use std::collections::HashMap;
     let mut map: HashMap<i32, i32> = HashMap::new();

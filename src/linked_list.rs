@@ -1,3 +1,5 @@
+#![allow(dead_code)]
+
 #[derive(PartialEq, Eq, Debug)]
 pub struct ListNode {
     pub val: i32,

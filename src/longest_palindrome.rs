@@ -1,3 +1,5 @@
+#![allow(dead_code)]
+
 // dp
 pub fn longest_palindrome(s: String) -> String {
     if s.len() <= 1 {
@@ -6,7 +8,7 @@ pub fn longest_palindrome(s: String) -> String {
     let mut dp: Vec<Vec<bool>> = Vec::with_capacity(s.len());
     for i in 0..s.len() {
         dp.push(vec![]);
-        for j in 0..s.len() {
+        for _j in 0..s.len() {
             // init true
             dp[i].push(true);
         }

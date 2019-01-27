@@ -1,5 +1,6 @@
+#![allow(dead_code)]
+
 pub fn cal_points(ops: Vec<String>) -> i32 {
-    let mut last = (0, 0);
     let mut nums = vec![];
     for s in ops {
         match s.as_str() {

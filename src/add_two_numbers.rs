@@ -7,8 +7,8 @@ pub fn add_two_numbers(
     l1: Option<Box<ListNode>>,
     l2: Option<Box<ListNode>>,
 ) -> Option<Box<ListNode>> {
-    let mut vec1 = list_to_vec(l1);
-    let mut vec2 = list_to_vec(l2);
+    let vec1 = list_to_vec(l1);
+    let vec2 = list_to_vec(l2);
     let mut vec3 = vec![];
     let mut carry = 0;
     let min_len = vec1.len().min(vec2.len());
