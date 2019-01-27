@@ -6,3 +6,4 @@ mod remove_duplicates;
 mod rotate_array;
 mod two_sum;
 mod find_median_sorted_arrays;
+mod longest_palindrome;
