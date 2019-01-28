@@ -2,16 +2,14 @@
 
 // dp
 pub fn longest_palindrome(s: String) -> String {
+    use std::iter;
+
     if s.len() <= 1 {
         return s;
     }
     let mut dp: Vec<Vec<bool>> = Vec::with_capacity(s.len());
-    for i in 0..s.len() {
-        dp.push(vec![]);
-        for _j in 0..s.len() {
-            // init true
-            dp[i].push(true);
-        }
+    for _ in 0..s.len() {
+        dp.push(iter::repeat(true).take(s.len()).collect())
     }
     let mut final_i = 0;
     let mut final_j = 0;
