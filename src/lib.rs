@@ -13,3 +13,4 @@ mod length_of_longest_substring;
 mod reverse_integer;
 mod palindrome_number;
 mod roman_to_integer;
+mod zigzag_conversion;
