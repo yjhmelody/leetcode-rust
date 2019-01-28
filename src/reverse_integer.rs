@@ -6,29 +6,18 @@ pub fn reverse(x: i32) -> i32 {
 
     let mut x = x;
     let mut ret = 0;
-    let mut overflow = false;
     while x != 0 {
         match i32::checked_mul(ret, 10) {
             Some(val) => { ret = val; }
-            None => {
-                overflow = true;
-                break;
-            }
+            None => { return 0; }
         };
         match i32::checked_add(ret, x % 10) {
             Some(val) => { ret = val; }
-            None => {
-                overflow = true;
-                break;
-            }
+            None => { return 0; }
         };
         x /= 10;
     }
-    if overflow {
-        0
-    } else {
-        ret
-    }
+    ret
 }
 
 #[cfg(test)]
