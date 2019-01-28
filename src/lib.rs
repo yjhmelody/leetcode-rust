@@ -10,3 +10,4 @@ mod longest_palindrome;
 mod cal_points;
 mod next_greater_element_1;
 mod length_of_longest_substring;
+mod reverse_integer;
