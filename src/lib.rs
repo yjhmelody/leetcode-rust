@@ -20,3 +20,4 @@ mod circular_queue;
 mod move_zeroes;
 mod remove_element;
 mod remove_duplicates_2;
+mod sort_colors;
