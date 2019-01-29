@@ -14,3 +14,4 @@ mod reverse_integer;
 mod palindrome_number;
 mod roman_to_integer;
 mod zigzag_conversion;
+mod integer_to_roman;
