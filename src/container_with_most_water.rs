@@ -25,6 +25,25 @@ pub fn max_area(height: Vec<i32>) -> i32 {
 }
 
 
+// O(n): Double pointers
+pub fn max_area2(height: Vec<i32>) -> i32 {
+    let mut max_area = 0;
+    let mut left = 0;
+    let mut right = height.len() - 1;
+    while left < right {
+        let area = (right - left) as i32 * i32::min(height[left], height[right]);
+        max_area = i32::max(max_area, area);
+        if height[left] < height[right] {
+            left += 1;
+        } else {
+            right -= 1;
+        }
+    }
+
+    max_area
+}
+
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -33,5 +52,11 @@ mod tests {
     fn test1() {
         assert_eq!(max_area(vec![1, 8, 6, 2, 5, 4, 8, 3, 7]), 49);
         assert_eq!(max_area(vec![1, 2]), 1);
+    }
+
+    #[test]
+    fn test2() {
+        assert_eq!(max_area2(vec![1, 8, 6, 2, 5, 4, 8, 3, 7]), 49);
+        assert_eq!(max_area2(vec![1, 2]), 1);
     }
 }
