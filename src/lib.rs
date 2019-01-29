@@ -19,3 +19,4 @@ mod container_with_most_water;
 mod circular_queue;
 mod move_zeroes;
 mod remove_element;
+mod remove_duplicates_2;
