@@ -36,6 +36,7 @@ pub fn convert(s: String, num_rows: i32) -> String {
         char_i += 1;
     }
 
+    // ineffective
     let mut ret = vec![];
     for line in mat {
         for ch in line {
@@ -49,6 +50,35 @@ pub fn convert(s: String, num_rows: i32) -> String {
 }
 
 
+pub fn convert2(s: String, num_rows: i32) -> String {
+    if num_rows == 1 {
+        return s;
+    }
+    let num_rows = num_rows as usize;
+    let mut rows: Vec<String> = Vec::with_capacity(usize::min(num_rows, s.len()));
+    for _ in 0..num_rows {
+        rows.push(String::from(""));
+    }
+    let mut cur_row = 0;
+    let mut down = false;
+    for c in s.chars() {
+        rows[cur_row] += &c.to_string();
+        if cur_row == 0 || cur_row == num_rows - 1 {
+            down = !down;
+        }
+        if down {
+            cur_row += 1;
+        } else {
+            cur_row -= 1;
+        }
+    }
+
+    rows.iter().fold(String::from(""), |acc, s| {
+        acc + s
+    })
+}
+
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -57,5 +87,11 @@ mod tests {
     fn test1() {
         assert_eq!(convert(String::from("LEETCODEISHIRING"), 3), String::from("LCIRETOESIIGEDHN"));
         assert_eq!(convert(String::from("LEETCODEISHIRING"), 4), String::from("LDREOEIIECIHNTSG"));
+    }
+
+    #[test]
+    fn test2() {
+        assert_eq!(convert2(String::from("LEETCODEISHIRING"), 3), String::from("LCIRETOESIIGEDHN"));
+        assert_eq!(convert2(String::from("LEETCODEISHIRING"), 4), String::from("LDREOEIIECIHNTSG"));
     }
 }
