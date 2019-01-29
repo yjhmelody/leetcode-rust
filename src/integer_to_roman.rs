@@ -1,3 +1,5 @@
+#![allow(dead_code)]
+
 pub fn int_to_roman(num: i32) -> String {
     let mut res = String::from("");
     let mut num = num;
@@ -5,42 +7,34 @@ pub fn int_to_roman(num: i32) -> String {
         res.push('M');
         num -= 1000;
     }
-
     if num >= 900 {
         res.push_str("CM");
         num -= 900;
     }
-
     if num >= 500 {
         res.push('D');
         num -= 500;
     }
-
     if num >= 400 {
         res.push_str("CD");
         num -= 400;
     }
-
     while num >= 100 {
         res.push('C');
         num -= 100;
     }
-
     if num >= 90 {
         res.push_str("XC");
         num -= 90;
     }
-
     if num >= 50 {
         res.push('L');
         num -= 50;
     }
-
     if num >= 40 {
         res.push_str("XL");
         num -= 40;
     }
-
     while num >= 10 {
         res.push('X');
         num -= 10;
