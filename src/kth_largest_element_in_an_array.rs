@@ -40,6 +40,25 @@ fn partition(nums: &mut Vec<i32>, left: i32, right: i32) -> i32 {
 }
 
 
+fn partition2(nums: &mut Vec<i32>, left: i32, right: i32) -> i32 {
+    let mut left = left as usize;
+    let mut right = right as usize;
+    let pivot_val = nums[left];
+    nums.swap(left as usize, right as usize);
+    let mut store_index = left;
+    for i in left..right {
+        if nums[i] < pivot_val {
+            nums.swap(store_index, i);
+            store_index += 1;
+        }
+    }
+
+    nums.swap(right, store_index);
+    store_index as i32
+}
+
+
+
 #[cfg(test)]
 mod tests {
     use super::*;
