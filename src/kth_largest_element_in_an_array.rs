@@ -21,22 +21,22 @@ pub fn find_kth_largest(mut nums: Vec<i32>, k: i32) -> i32 {
 
 fn partition(nums: &mut Vec<i32>, left: i32, right: i32) -> i32 {
     let mut pivot_val = nums[left as usize];
-    let mut i = left;
-    let mut j = right;
+    let mut i = left as usize;
+    let mut j = right as usize;
     while i < j {
-        while i < j && nums[j as usize] >= pivot_val {
+        while i < j && nums[j] >= pivot_val {
             j -= 1;
         }
-        nums[i as usize] = nums[j as usize];
+        nums[i] = nums[j];
 
-        while i < j && nums[i as usize] <= pivot_val {
+        while i < j && nums[i] <= pivot_val {
             i += 1;
         }
-        nums[j as usize] = nums[i as usize];
+        nums[j] = nums[i];
     }
 
-    nums[i as usize] = pivot_val;
-    i
+    nums[i] = pivot_val;
+    i as i32
 }
 
 
@@ -77,5 +77,13 @@ mod tests {
         let mut nums = vec![-1, -1];
         let val = find_kth_largest(nums, 2);
         assert_eq!(val, -1);
+    }
+
+    #[test]
+    fn test2() {
+        let mut nums = vec![3, 2, 1, 4, 5, 6];
+        let len = nums.len() as i32 - 1;
+        partition2(&mut nums, 0, len);
+        assert_eq!(nums, vec![2, 1, 3, 4, 5, 6]);
     }
 }
