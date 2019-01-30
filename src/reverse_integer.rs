@@ -8,12 +8,20 @@ pub fn reverse(x: i32) -> i32 {
     let mut ret = 0;
     while x != 0 {
         match i32::checked_mul(ret, 10) {
-            Some(val) => { ret = val; }
-            None => { return 0; }
+            Some(val) => {
+                ret = val;
+            }
+            None => {
+                return 0;
+            }
         };
         match i32::checked_add(ret, x % 10) {
-            Some(val) => { ret = val; }
-            None => { return 0; }
+            Some(val) => {
+                ret = val;
+            }
+            None => {
+                return 0;
+            }
         };
         x /= 10;
     }

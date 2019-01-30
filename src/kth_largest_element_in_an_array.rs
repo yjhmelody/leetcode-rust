@@ -18,7 +18,6 @@ pub fn find_kth_largest(mut nums: Vec<i32>, k: i32) -> i32 {
     nums[k as usize - 1]
 }
 
-
 fn partition(nums: &mut Vec<i32>, left: i32, right: i32) -> i32 {
     let mut pivot_val = nums[left as usize];
     let mut i = left as usize;
@@ -39,7 +38,6 @@ fn partition(nums: &mut Vec<i32>, left: i32, right: i32) -> i32 {
     i as i32
 }
 
-
 fn partition2(nums: &mut Vec<i32>, left: i32, right: i32) -> i32 {
     let mut left = left as usize;
     let mut right = right as usize;
@@ -56,8 +54,6 @@ fn partition2(nums: &mut Vec<i32>, left: i32, right: i32) -> i32 {
     nums.swap(right, store_index);
     store_index as i32
 }
-
-
 
 #[cfg(test)]
 mod tests {

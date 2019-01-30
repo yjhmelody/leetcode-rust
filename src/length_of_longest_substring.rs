@@ -22,7 +22,6 @@ pub fn length_of_longest_substring(s: String) -> i32 {
     longest as i32
 }
 
-
 // opt: move the window more than one step by look up hash map
 pub fn length_of_longest_substring2(s: String) -> i32 {
     use std::collections::HashMap;

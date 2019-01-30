@@ -80,7 +80,6 @@ impl MyCircularQueue {
     }
 }
 
-
 #[cfg(test)]
 mod tests {
     use super::*;

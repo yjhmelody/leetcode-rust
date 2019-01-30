@@ -24,7 +24,6 @@ pub fn max_area(height: Vec<i32>) -> i32 {
     dp[dp.len() - 1].1
 }
 
-
 // O(n): Double pointers
 pub fn max_area2(height: Vec<i32>) -> i32 {
     let mut max_area = 0;
@@ -42,7 +41,6 @@ pub fn max_area2(height: Vec<i32>) -> i32 {
 
     max_area
 }
-
 
 #[cfg(test)]
 mod tests {

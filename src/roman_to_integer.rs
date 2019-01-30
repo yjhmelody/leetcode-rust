@@ -97,7 +97,6 @@ pub fn roman_to_int2(s: String) -> i32 {
     sum
 }
 
-
 #[cfg(test)]
 mod tests {
     use super::*;

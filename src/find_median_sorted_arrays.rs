@@ -51,15 +51,14 @@ pub fn find_median_sorted_arrays(nums1: Vec<i32>, nums2: Vec<i32>) -> f64 {
     0f64
 }
 
-
 #[cfg(test)]
 mod tests {
 
     #[test]
     fn test1() {
-//        assert_eq!(find_median_sorted_arrays(vec![1, 3], vec![2]), 2.0f64);
-//        assert_eq!(find_median_sorted_arrays(vec![1,2], vec![3,4]), 2.5f64);
-//        assert_eq!(find_median_sorted_arrays(vec![], vec![1]), 1f64);
-//        assert_eq!(find_median_sorted_arrays(vec![1], vec![1]), 1f64);
+        //        assert_eq!(find_median_sorted_arrays(vec![1, 3], vec![2]), 2.0f64);
+        //        assert_eq!(find_median_sorted_arrays(vec![1,2], vec![3,4]), 2.5f64);
+        //        assert_eq!(find_median_sorted_arrays(vec![], vec![1]), 1f64);
+        //        assert_eq!(find_median_sorted_arrays(vec![1], vec![1]), 1f64);
     }
 }

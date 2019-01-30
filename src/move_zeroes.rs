@@ -12,7 +12,6 @@ pub fn move_zeroes(nums: &mut Vec<i32>) {
     }
 }
 
-
 #[cfg(test)]
 mod tests {
     use super::*;

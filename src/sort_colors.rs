@@ -34,7 +34,6 @@ pub fn sort_colors2(nums: &mut Vec<i32>) {
     }
 }
 
-
 #[cfg(test)]
 mod tests {
     use super::*;

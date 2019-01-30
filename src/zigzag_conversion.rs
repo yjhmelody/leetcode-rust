@@ -13,14 +13,15 @@ pub fn convert(s: String, num_rows: i32) -> String {
         mat.push(iter::repeat('\0').take(s.len()).collect::<Vec<char>>());
     }
 
-
     let mut step = false;
     let mut j = 0;
     let mut char_i = 0;
     for i in (0..num_rows).chain((1..num_rows - 1).rev()).cycle() {
         match s.chars().nth(char_i) {
-            Some(c) => { mat[i][j] = c }
-            None => { break; }
+            Some(c) => mat[i][j] = c,
+            None => {
+                break;
+            }
         };
         if i == num_rows - 1 {
             step = true;
@@ -49,7 +50,6 @@ pub fn convert(s: String, num_rows: i32) -> String {
     ret.iter().collect::<String>()
 }
 
-
 pub fn convert2(s: String, num_rows: i32) -> String {
     if num_rows == 1 {
         return s;
@@ -73,11 +73,8 @@ pub fn convert2(s: String, num_rows: i32) -> String {
         }
     }
 
-    rows.iter().fold(String::from(""), |acc, s| {
-        acc + s
-    })
+    rows.iter().fold(String::from(""), |acc, s| acc + s)
 }
-
 
 #[cfg(test)]
 mod tests {
@@ -85,13 +82,25 @@ mod tests {
 
     #[test]
     fn test1() {
-        assert_eq!(convert(String::from("LEETCODEISHIRING"), 3), String::from("LCIRETOESIIGEDHN"));
-        assert_eq!(convert(String::from("LEETCODEISHIRING"), 4), String::from("LDREOEIIECIHNTSG"));
+        assert_eq!(
+            convert(String::from("LEETCODEISHIRING"), 3),
+            String::from("LCIRETOESIIGEDHN")
+        );
+        assert_eq!(
+            convert(String::from("LEETCODEISHIRING"), 4),
+            String::from("LDREOEIIECIHNTSG")
+        );
     }
 
     #[test]
     fn test2() {
-        assert_eq!(convert2(String::from("LEETCODEISHIRING"), 3), String::from("LCIRETOESIIGEDHN"));
-        assert_eq!(convert2(String::from("LEETCODEISHIRING"), 4), String::from("LDREOEIIECIHNTSG"));
+        assert_eq!(
+            convert2(String::from("LEETCODEISHIRING"), 3),
+            String::from("LCIRETOESIIGEDHN")
+        );
+        assert_eq!(
+            convert2(String::from("LEETCODEISHIRING"), 4),
+            String::from("LDREOEIIECIHNTSG")
+        );
     }
 }
