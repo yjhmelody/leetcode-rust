@@ -22,3 +22,4 @@ mod remove_element;
 mod remove_duplicates_2;
 mod sort_colors;
 mod kth_largest_element_in_an_array;
+mod merge_sorted_array;
