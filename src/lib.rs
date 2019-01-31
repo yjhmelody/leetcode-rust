@@ -29,3 +29,4 @@ pub mod sort_colors;
 pub mod two_sum;
 pub mod valid_parentheses;
 pub mod zigzag_conversion;
+pub mod jewels_and_stones;
