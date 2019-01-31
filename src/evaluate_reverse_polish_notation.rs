@@ -8,10 +8,7 @@ pub fn eval_rpn(tokens: Vec<String>) -> i32 {
     let div = String::from("/");
 
     for token in tokens {
-        if token == add ||
-            token == sub ||
-            token == mul ||
-            token == div {
+        if token == add || token == sub || token == mul || token == div {
             let b = stack.pop().unwrap();
             let a = stack.pop().unwrap();
             let c;
