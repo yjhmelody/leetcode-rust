@@ -25,3 +25,4 @@ mod two_sum;
 mod zigzag_conversion;
 mod number_of_islands;
 mod min_stack;
+mod valid_parentheses;
