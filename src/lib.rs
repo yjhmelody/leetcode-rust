@@ -1,5 +1,6 @@
-pub mod linked_list;
+pub use linked_list::{*};
 
+pub mod linked_list;
 pub mod add_two_numbers;
 pub mod cal_points;
 pub mod circular_queue;
@@ -26,3 +27,4 @@ pub mod sort_colors;
 pub mod two_sum;
 pub mod valid_parentheses;
 pub mod zigzag_conversion;
+pub mod daily_temperatures;

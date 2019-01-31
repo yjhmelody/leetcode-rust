@@ -26,8 +26,17 @@ macro_rules! linkedlist {
                ref_head = ref_head.next.as_mut().unwrap();
             )*
 
+            // avoid reassign
             let _ = ref_head;
             head.next
         }
     };
+}
+
+#[cfg(test)]
+mod tests {
+    #[test]
+    fn test1() {
+        let mut list = linkedlist![1, 2, 3];
+    }
 }
