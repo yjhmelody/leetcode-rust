@@ -18,7 +18,6 @@ pub fn daily_temperatures(t: Vec<i32>) -> Vec<i32> {
     res
 }
 
-
 #[cfg(test)]
 mod tests {
     use super::*;
