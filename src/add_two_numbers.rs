@@ -1,6 +1,6 @@
 #![allow(dead_code)]
 
-use crate::linked_list::ListNode;
+use crate::linked_list::*;
 
 // add two link lists by transfer them to vector firstly and then transfer them back to lists.
 pub fn add_two_numbers(

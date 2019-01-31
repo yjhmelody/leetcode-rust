@@ -19,9 +19,7 @@ struct StackNode {
 impl MinStack {
     /** initialize your data structure here. */
     pub fn new() -> Self {
-        Self {
-            top: None,
-        }
+        Self { top: None }
     }
 
     pub fn is_empty(&self) -> bool {
@@ -51,10 +49,7 @@ impl MinStack {
 
     fn _push(&mut self, x: i32) {
         println!("{}", x);
-        let mut node = StackNode {
-            val: x,
-            next: None,
-        };
+        let mut node = StackNode { val: x, next: None };
         let next = self.top.take();
         node.next = next;
         self.top = Some(Box::new(node));
@@ -79,23 +74,20 @@ impl MinStack {
     pub fn top(&self) -> i32 {
         match &self.top {
             Some(x) => x.val,
-            None => { unreachable!() }
+            None => unreachable!(),
         }
     }
 
     pub fn get_min(&self) -> i32 {
         match &self.top {
-            None => { unreachable!() }
-            Some(cur) => {
-                match &cur.next {
-                    None => { unreachable!() }
-                    Some(min) => { min.val }
-                }
-            }
+            None => unreachable!(),
+            Some(cur) => match &cur.next {
+                None => unreachable!(),
+                Some(min) => min.val,
+            },
         }
     }
 }
-
 
 #[cfg(test)]
 mod tests {

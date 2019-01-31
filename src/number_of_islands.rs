@@ -79,11 +79,10 @@ fn bfs(grid: &Vec<Vec<char>>, visited: &mut Vec<Vec<bool>>, i: usize, j: usize) 
                 }
             }
 
-            None => unreachable!()
+            None => unreachable!(),
         }
     }
 }
-
 
 // bfs with loop: reuse the grid
 pub fn num_islands3(mut grid: Vec<Vec<char>>) -> i32 {
@@ -125,7 +124,7 @@ fn bfs2(grid: &mut Vec<Vec<char>>, i: usize, j: usize) {
                 }
             }
 
-            None => unreachable!()
+            None => unreachable!(),
         }
     }
 }
