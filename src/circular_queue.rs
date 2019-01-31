@@ -4,6 +4,7 @@
 use std::iter;
 
 // One more space
+#[derive(Debug, Clone)]
 pub struct MyCircularQueue {
     q: Vec<i32>,
     head: usize,
