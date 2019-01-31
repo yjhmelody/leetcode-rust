@@ -23,3 +23,4 @@ mod rotate_array;
 mod sort_colors;
 mod two_sum;
 mod zigzag_conversion;
+mod number_of_islands;

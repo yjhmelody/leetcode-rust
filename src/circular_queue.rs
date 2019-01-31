@@ -4,7 +4,7 @@
 use std::iter;
 
 // One more space
-struct MyCircularQueue {
+pub struct MyCircularQueue {
     q: Vec<i32>,
     head: usize,
     tail: usize,
@@ -17,7 +17,7 @@ struct MyCircularQueue {
  */
 impl MyCircularQueue {
     /** Initialize your data structure here. Set the size of the queue to be k. */
-    fn new(k: i32) -> Self {
+    pub fn new(k: i32) -> Self {
         let size = k as usize + 1;
         let q = iter::repeat(0).take(size.clone()).collect::<Vec<i32>>();
         Self {
@@ -29,7 +29,7 @@ impl MyCircularQueue {
     }
 
     /** Insert an element into the circular queue. Return true if the operation is successful. */
-    fn en_queue(&mut self, value: i32) -> bool {
+    pub fn en_queue(&mut self, value: i32) -> bool {
         if self.is_full() {
             false
         } else {
@@ -41,7 +41,7 @@ impl MyCircularQueue {
     }
 
     /** Delete an element from the circular queue. Return true if the operation is successful. */
-    fn de_queue(&mut self) -> bool {
+    pub fn de_queue(&mut self) -> bool {
         if self.is_empty() {
             false
         } else {
@@ -52,7 +52,7 @@ impl MyCircularQueue {
     }
 
     /** Get the front item from the queue. */
-    fn front(&self) -> i32 {
+    pub fn front(&self) -> i32 {
         if self.is_empty() {
             -1
         } else {
@@ -61,7 +61,7 @@ impl MyCircularQueue {
     }
 
     /** Get the last item from the queue. */
-    fn rear(&self) -> i32 {
+    pub fn rear(&self) -> i32 {
         if self.is_empty() {
             -1
         } else {
@@ -70,12 +70,12 @@ impl MyCircularQueue {
     }
 
     /** Checks whether the circular queue is empty or not. */
-    fn is_empty(&self) -> bool {
+    pub fn is_empty(&self) -> bool {
         self.head == self.tail
     }
 
     /** Checks whether the circular queue is full or not. */
-    fn is_full(&self) -> bool {
+    pub fn is_full(&self) -> bool {
         (self.tail + 1) % self.size == self.head
     }
 }

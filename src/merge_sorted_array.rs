@@ -81,13 +81,13 @@ mod tests {
     fn test1() {
         let mut nums1 = vec![1, 2, 3, 0, 0, 0];
         let mut nums2 = vec![2, 5, 6];
-        let mut nums3 = vec![1, 2, 2, 3, 5, 6];
+        let nums3 = vec![1, 2, 2, 3, 5, 6];
         merge(&mut nums1, 3, &mut nums2, 3);
         assert_eq!(nums1, nums3);
 
         let mut nums1 = vec![1, 2, 4, 5, 6, 0];
         let mut nums2 = vec![3];
-        let mut nums3 = vec![1, 2, 3, 4, 5, 6];
+        let nums3 = vec![1, 2, 3, 4, 5, 6];
         merge(&mut nums1, 5, &mut nums2, 1);
         assert_eq!(nums1, nums3);
     }
@@ -96,13 +96,13 @@ mod tests {
     fn test2() {
         let mut nums1 = vec![1, 2, 3, 0, 0, 0];
         let mut nums2 = vec![2, 5, 6];
-        let mut nums3 = vec![1, 2, 2, 3, 5, 6];
+        let nums3 = vec![1, 2, 2, 3, 5, 6];
         merge(&mut nums1, 3, &mut nums2, 3);
         assert_eq!(nums1, nums3);
 
         let mut nums1 = vec![1, 2, 4, 5, 6, 0];
         let mut nums2 = vec![3];
-        let mut nums3 = vec![1, 2, 3, 4, 5, 6];
+        let nums3 = vec![1, 2, 3, 4, 5, 6];
         merge2(&mut nums1, 5, &mut nums2, 1);
         assert_eq!(nums1, nums3);
     }
