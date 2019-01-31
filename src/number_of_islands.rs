@@ -85,6 +85,51 @@ fn bfs(grid: &Vec<Vec<char>>, visited: &mut Vec<Vec<bool>>, i: usize, j: usize) 
 }
 
 
+// bfs with loop: reuse the grid
+pub fn num_islands3(mut grid: Vec<Vec<char>>) -> i32 {
+    let mut count = 0;
+    for i in 0..grid.len() {
+        for j in 0..grid[0].len() {
+            if grid[i][j] == '1' {
+                bfs2(&mut grid, i, j);
+                count += 1;
+            }
+        }
+    }
+
+    count
+}
+
+fn bfs2(grid: &mut Vec<Vec<char>>, i: usize, j: usize) {
+    use std::collections::LinkedList;
+    let mut q = LinkedList::new();
+    q.push_back((i, j));
+    while !q.is_empty() {
+        match q.pop_front() {
+            Some((i, j)) => {
+                if i + 1 < grid.len() && grid[i + 1][j] == '1' {
+                    grid[i + 1][j] = '0';
+                    q.push_back((i + 1, j));
+                }
+                if i > 0 && grid[i - 1][j] == '1' {
+                    grid[i - 1][j] = '0';
+                    q.push_back((i - 1, j));
+                }
+                if j + 1 < grid[0].len() && grid[i][j + 1] == '1' {
+                    grid[i][j + 1] = '0';
+                    q.push_back((i, j + 1));
+                }
+                if j > 0 && grid[i][j - 1] == '1' {
+                    grid[i][j - 1] = '0';
+                    q.push_back((i, j - 1));
+                }
+            }
+
+            None => unreachable!()
+        }
+    }
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -111,5 +156,17 @@ mod tests {
         ];
 
         assert_eq!(num_islands2(grid), 3);
+    }
+
+    #[test]
+    fn test3() {
+        let grid = vec![
+            vec!['1', '1', '0', '0', '0'],
+            vec!['1', '1', '0', '0', '0'],
+            vec!['0', '0', '1', '0', '0'],
+            vec!['0', '0', '0', '1', '1'],
+        ];
+
+        assert_eq!(num_islands3(grid), 3);
     }
 }
