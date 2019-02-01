@@ -22,6 +22,9 @@ mod tests {
 
     #[test]
     fn test1() {
-        assert_eq!(num_jewels_in_stones(String::from("aA"), String::from("aAAbbbb")), 3);
+        assert_eq!(
+            num_jewels_in_stones(String::from("aA"), String::from("aAAbbbb")),
+            3
+        );
     }
 }
