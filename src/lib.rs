@@ -36,3 +36,4 @@ pub mod valid_anagram;
 pub mod valid_parentheses;
 pub mod zigzag_conversion;
 pub mod isomorphic_strings;
+pub mod sort_characters_by_frequency;
