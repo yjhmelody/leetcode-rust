@@ -35,3 +35,4 @@ pub mod two_sum;
 pub mod valid_anagram;
 pub mod valid_parentheses;
 pub mod zigzag_conversion;
+pub mod isomorphic_strings;
