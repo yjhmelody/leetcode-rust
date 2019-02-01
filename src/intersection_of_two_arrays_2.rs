@@ -10,8 +10,12 @@ pub fn intersect(nums1: Vec<i32>, nums2: Vec<i32>) -> Vec<i32> {
     let mut res = vec![];
     for num in nums1 {
         match map.get_mut(&num) {
-            Some(v) => { *v += 1; }
-            None => { map.insert(num, 1); }
+            Some(v) => {
+                *v += 1;
+            }
+            None => {
+                map.insert(num, 1);
+            }
         }
     }
 
@@ -39,7 +43,6 @@ mod tests {
         let nums1 = vec![1, 2, 2, 1];
         let nums2 = vec![2, 2];
         assert_eq!(intersect(nums1, nums2), vec![2, 2]);
-
 
         let nums1 = vec![4, 9, 5];
         let nums2 = vec![9, 4, 9, 8, 4];
