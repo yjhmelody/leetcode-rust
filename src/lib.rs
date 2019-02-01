@@ -32,3 +32,4 @@ pub mod two_sum;
 pub mod valid_parentheses;
 pub mod zigzag_conversion;
 pub mod happy_number;
+pub mod contains_duplicate;
