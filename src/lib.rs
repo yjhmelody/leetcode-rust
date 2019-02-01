@@ -9,6 +9,7 @@ pub mod evaluate_reverse_polish_notation;
 pub mod find_median_sorted_arrays;
 pub mod integer_to_roman;
 pub mod intersection_of_two_arrays;
+pub mod intersection_of_two_arrays_2;
 pub mod jewels_and_stones;
 pub mod kth_largest_element_in_an_array;
 pub mod length_of_longest_substring;
