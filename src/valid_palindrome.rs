@@ -8,18 +8,15 @@ pub fn is_palindrome(s: String) -> bool {
     let s = s.into_bytes();
     let mut i = 0;
     let mut j = s.len() - 1;
-    loop {
-        while i < j && !s[i].is_ascii_alphanumeric() {
+    while i < j {
+        if !s[i].is_ascii_alphanumeric() {
             i += 1;
+            continue;
         }
-        while j > i && !s[j].is_ascii_alphanumeric() {
+        if !s[j].is_ascii_alphanumeric() {
             j -= 1;
+            continue;
         }
-
-        if i >= j {
-            return true;
-        }
-
         let c1 = s[i];
         let c2 = s[j];
         if c1.to_ascii_lowercase() != c2.to_ascii_lowercase() {
@@ -50,10 +47,12 @@ mod tests {
 
     #[test]
     fn test1() {
+        assert_eq!(is_palindrome(String::from(".,")), true);
+
         assert_eq!(is_palindrome(String::from("A man, a plan, a canal: Panama")), true);
         assert_eq!(is_palindrome(String::from(".a")), true);
+        assert_eq!(is_palindrome(String::from("!!!")), true);
         assert_eq!(is_palindrome(String::from("a.")), true);
-        assert_eq!(is_palindrome(String::from(".,")), true);
     }
 
     #[test]
