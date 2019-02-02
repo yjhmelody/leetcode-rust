@@ -43,3 +43,4 @@ pub mod valid_anagram;
 pub mod valid_palindrome;
 pub mod valid_parentheses;
 pub mod zigzag_conversion;
+pub mod pascal_triangle;

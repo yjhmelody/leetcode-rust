@@ -2,7 +2,6 @@
 
 use crate::linked_list::*;
 
-//
 pub fn add_two_numbers2(
     l1: Option<Box<ListNode>>,
     l2: Option<Box<ListNode>>,
