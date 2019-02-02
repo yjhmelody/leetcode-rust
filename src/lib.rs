@@ -1,6 +1,8 @@
+pub mod binary_tree;
 pub mod linked_list;
 
 pub mod add_two_numbers;
+pub mod binary_tree_preorder_traversal;
 pub mod cal_points;
 pub mod circular_queue;
 pub mod container_with_most_water;
@@ -20,6 +22,7 @@ pub mod longest_palindrome;
 pub mod max_profit;
 pub mod merge_sorted_array;
 pub mod min_stack;
+pub mod minimum_size_subarray_sum;
 pub mod move_zeroes;
 pub mod next_greater_element_1;
 pub mod number_of_islands;
@@ -40,4 +43,3 @@ pub mod valid_anagram;
 pub mod valid_palindrome;
 pub mod valid_parentheses;
 pub mod zigzag_conversion;
-pub mod minimum_size_subarray_sum;
