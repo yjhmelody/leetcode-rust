@@ -25,14 +25,16 @@ pub fn is_isomorphic(s: String, t: String) -> bool {
     true
 }
 
-
 #[cfg(test)]
 mod tests {
     use super::*;
 
     #[test]
     fn test1() {
-        assert_eq!(is_isomorphic(String::from("egg"), String::from("add")), true);
+        assert_eq!(
+            is_isomorphic(String::from("egg"), String::from("add")),
+            true
+        );
         assert_eq!(is_isomorphic(String::from("ab"), String::from("aa")), false);
     }
 }

@@ -7,16 +7,18 @@ pub fn frequency_sort(s: String) -> String {
     let mut freq = HashMap::new();
     for c in s.chars() {
         match freq.get_mut(&c) {
-            Some(v) => { *v += 1; }
-            None => { freq.insert(c, 1); }
+            Some(v) => {
+                *v += 1;
+            }
+            None => {
+                freq.insert(c, 1);
+            }
         }
     }
 
     let mut res = String::new();
     let mut freq = freq.iter().collect::<Vec<_>>();
-    freq.sort_by(|a, b| {
-        (*b).1.partial_cmp((*a).1).unwrap()
-    });
+    freq.sort_by(|a, b| (*b).1.partial_cmp((*a).1).unwrap());
 
     freq.iter().for_each(|pair| {
         for _ in 0..*pair.1 {
@@ -34,8 +36,12 @@ pub fn frequency_sort2(s: String) -> String {
     let mut freq = HashMap::new();
     for c in s.chars() {
         match freq.get_mut(&c) {
-            Some(v) => { *v += 1; }
-            None => { freq.insert(c, 1); }
+            Some(v) => {
+                *v += 1;
+            }
+            None => {
+                freq.insert(c, 1);
+            }
         }
     }
 
@@ -63,13 +69,22 @@ mod tests {
     #[test]
     fn test1() {
         let res = frequency_sort(String::from("tree"));
-        assert_eq!(res == String::from("eert") || res == String::from("eetr"), true);
+        assert_eq!(
+            res == String::from("eert") || res == String::from("eetr"),
+            true
+        );
     }
 
     #[test]
     fn test2() {
         let res = frequency_sort2(String::from("tree"));
-        assert_eq!(res == String::from("eert") || res == String::from("eetr"), true);
-        assert_eq!(frequency_sort2(String::from("eeeee")), String::from("eeeee"));
+        assert_eq!(
+            res == String::from("eert") || res == String::from("eetr"),
+            true
+        );
+        assert_eq!(
+            frequency_sort2(String::from("eeeee")),
+            String::from("eeeee")
+        );
     }
 }
