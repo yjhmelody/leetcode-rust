@@ -34,7 +34,6 @@ pub fn min_sub_array_len(s: i32, nums: Vec<i32>) -> i32 {
     }
 }
 
-
 // other expression
 pub fn min_sub_array_len2(s: i32, nums: Vec<i32>) -> i32 {
     if nums.len() < 1 {
