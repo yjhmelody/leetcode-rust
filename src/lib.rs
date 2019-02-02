@@ -37,6 +37,7 @@ pub mod sort_colors;
 pub mod two_sum;
 pub mod two_sum_2;
 pub mod valid_anagram;
+pub mod valid_palindrome;
 pub mod valid_parentheses;
 pub mod zigzag_conversion;
-pub mod valid_palindrome;
+pub mod minimum_size_subarray_sum;

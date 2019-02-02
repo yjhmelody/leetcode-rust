@@ -49,7 +49,10 @@ mod tests {
     fn test1() {
         assert_eq!(is_palindrome(String::from(".,")), true);
 
-        assert_eq!(is_palindrome(String::from("A man, a plan, a canal: Panama")), true);
+        assert_eq!(
+            is_palindrome(String::from("A man, a plan, a canal: Panama")),
+            true
+        );
         assert_eq!(is_palindrome(String::from(".a")), true);
         assert_eq!(is_palindrome(String::from("!!!")), true);
         assert_eq!(is_palindrome(String::from("a.")), true);
@@ -57,7 +60,10 @@ mod tests {
 
     #[test]
     fn test2() {
-        assert_eq!(is_palindrome2(String::from("A man, a plan, a canal: Panama")), true);
+        assert_eq!(
+            is_palindrome2(String::from("A man, a plan, a canal: Panama")),
+            true
+        );
         assert_eq!(is_palindrome2(String::from(".a")), true);
         assert_eq!(is_palindrome2(String::from("a.")), true);
         assert_eq!(is_palindrome2(String::from(".,")), true);

@@ -17,7 +17,6 @@ pub fn two_sum(numbers: Vec<i32>, target: i32) -> Vec<i32> {
     vec![]
 }
 
-
 #[cfg(test)]
 mod tests {
     use super::*;
