@@ -28,7 +28,7 @@ impl Solution {
 fn preorder(
     root: Option<Rc<RefCell<TreeNode>>>,
     mut x: i32,
-    mut y: i32,
+    y: i32,
     left: &mut i32,
     right: &mut i32,
 ) {
