@@ -27,6 +27,9 @@ mod tests {
 
     #[test]
     fn test1() {
-        assert_eq!(generate(4), vec![vec![1], vec![1, 1], vec![1, 2, 1], vec![1, 3, 3, 1]]);
+        assert_eq!(
+            generate(4),
+            vec![vec![1], vec![1, 1], vec![1, 2, 1], vec![1, 3, 3, 1]]
+        );
     }
 }

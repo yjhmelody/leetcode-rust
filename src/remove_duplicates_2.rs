@@ -11,7 +11,7 @@ pub fn remove_duplicates(nums: &mut Vec<i32>) -> i32 {
             twice = false;
             count += 1;
             nums[count] = nums[i + 1];
-            // twice
+        // twice
         } else if nums[i] == nums[i + 1] && !twice {
             twice = true;
             count += 1;
