@@ -2,6 +2,8 @@ pub mod binary_tree;
 pub mod linked_list;
 
 pub mod add_two_numbers;
+pub mod binary_tree_inorder_traversal;
+pub mod binary_tree_postorder_traversal;
 pub mod binary_tree_preorder_traversal;
 pub mod cal_points;
 pub mod circular_queue;
