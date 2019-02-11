@@ -51,3 +51,4 @@ pub mod valid_palindrome;
 pub mod valid_parentheses;
 pub mod vertical_order_traversal_of_a_binary_tree;
 pub mod zigzag_conversion;
+pub mod three_sum;
