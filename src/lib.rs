@@ -29,6 +29,7 @@ pub mod minimum_size_subarray_sum;
 pub mod move_zeroes;
 pub mod next_greater_element_1;
 pub mod number_of_islands;
+pub mod open_the_lock;
 pub mod palindrome_number;
 pub mod pascal_triangle;
 pub mod perfect_squares;
