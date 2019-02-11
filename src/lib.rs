@@ -44,6 +44,7 @@ pub mod rotate_array;
 pub mod smallest_string_starting_from_leaf;
 pub mod sort_characters_by_frequency;
 pub mod sort_colors;
+pub mod sqrt_x;
 pub mod sum_of_even_numbers_after_queries;
 pub mod three_sum;
 pub mod two_sum;
