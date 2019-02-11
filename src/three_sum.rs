@@ -58,7 +58,7 @@ mod tests {
     #[test]
     fn test1() {
         let res = three_sum(vec![-1, 0, 1, 2, -1, -4]);
-        assert_eq!(res, vec![vec![-1, -1, 2], vec![-1, 0, 1], ]);
+        assert_eq!(res, vec![vec![-1, -1, 2], vec![-1, 0, 1]]);
 
         let res = three_sum(vec![0, 1, 2, 3]);
         let right: Vec<Vec<i32>> = vec![];
