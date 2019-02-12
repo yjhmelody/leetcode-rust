@@ -1,6 +1,5 @@
 #![allow(dead_code)]
 
-
 #[derive(Debug, Clone)]
 pub struct MinStack {
     top: Option<Box<StackNode>>,
@@ -12,12 +11,7 @@ struct StackNode {
     next: Option<Box<StackNode>>,
 }
 
-/**
- * `&self` means the method takes an immutable reference.
- * If you need a mutable reference, change it to `&mut self` instead.
- */
 impl MinStack {
-    /** initialize your data structure here. */
     pub fn new() -> Self {
         Self { top: None }
     }
