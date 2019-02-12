@@ -13,6 +13,7 @@ pub mod contains_duplicate;
 pub mod daily_temperatures;
 pub mod evaluate_reverse_polish_notation;
 pub mod find_median_sorted_arrays;
+pub mod find_peak_element;
 pub mod happy_number;
 pub mod integer_to_roman;
 pub mod internal_list_intersections;
