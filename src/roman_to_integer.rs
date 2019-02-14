@@ -72,27 +72,27 @@ pub fn roman_to_int(s: String) -> i32 {
 // 20ms
 pub fn roman_to_int2(s: String) -> i32 {
     use std::collections::HashMap;
-    let mut map: HashMap<char, i32> = HashMap::new();
-    map.insert('I', 1);
-    map.insert('V', 5);
-    map.insert('X', 10);
-    map.insert('L', 50);
-    map.insert('C', 100);
-    map.insert('D', 500);
-    map.insert('M', 1000);
+    let mut map: HashMap<u8, i32> = HashMap::new();
+    map.insert(b'I', 1);
+    map.insert(b'V', 5);
+    map.insert(b'X', 10);
+    map.insert(b'L', 50);
+    map.insert(b'C', 100);
+    map.insert(b'D', 500);
+    map.insert(b'M', 1000);
 
     let mut sum = 0;
-
+    let s = s.into_bytes();
     for i in 0..s.len() - 1 {
-        let left = map.get(&s.chars().nth(i).unwrap()).unwrap();
-        let right = map.get(&s.chars().nth(i + 1).unwrap()).unwrap();
+        let left = map.get(&s[i]).unwrap();
+        let right = map.get(&s[i + 1]).unwrap();
         if left < right {
             sum -= left;
         } else {
             sum += left;
         }
     }
-    sum += map.get(&s.chars().nth(s.len() - 1).unwrap()).unwrap();
+    sum += map.get(&s[s.len() - 1]).unwrap();
 
     sum
 }

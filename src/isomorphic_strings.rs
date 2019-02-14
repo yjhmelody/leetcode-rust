@@ -3,12 +3,13 @@
 // use two hash maps to judge isomorphic
 pub fn is_isomorphic(s: String, t: String) -> bool {
     use std::collections::HashMap;
-    let mut map: HashMap<char, char> = HashMap::new();
-    let mut map2: HashMap<char, char> = HashMap::new();
-
+    let mut map: HashMap<u8, u8> = HashMap::new();
+    let mut map2: HashMap<u8, u8> = HashMap::new();
+    let s = s.into_bytes();
+    let t = t.into_bytes();
     for i in 0..s.len() {
-        let c1 = s.chars().nth(i).unwrap();
-        let c2 = t.chars().nth(i).unwrap();
+        let c1 = s[i];
+        let c2 = t[i];
 
         if map.contains_key(&c1) {
             let v = map.get_mut(&c1).unwrap();

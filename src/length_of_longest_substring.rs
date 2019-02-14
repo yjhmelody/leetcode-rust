@@ -8,13 +8,14 @@ pub fn length_of_longest_substring(s: String) -> i32 {
     let mut longest = 0;
     let mut i = 0;
     let mut j = 0;
+    let s = s.into_bytes();
     while i < s.len() && j < s.len() {
-        if !set.contains(&s.chars().nth(j).unwrap()) {
-            set.insert(s.chars().nth(j).unwrap().clone());
+        if !set.contains(&s[j]) {
+            set.insert(s[j]);
             j += 1;
             longest = usize::max(longest, j - i);
         } else {
-            set.remove(&s.chars().nth(i).unwrap());
+            set.remove(&s[i]);
             i += 1;
         }
     }
@@ -30,12 +31,13 @@ pub fn length_of_longest_substring2(s: String) -> i32 {
     let mut longest = 0;
     let mut i = 0;
     let mut j = 0;
+    let s = s.into_bytes();
     while j < s.len() {
-        if map.contains_key(&s.chars().nth(j).unwrap()) {
-            i = usize::max(map[&s.chars().nth(j).unwrap()], i);
+        if map.contains_key(&s[j]) {
+            i = usize::max(map[&s[j]], i);
         }
         longest = longest.max(j + 1 - i);
-        map.insert(s.chars().nth(j).unwrap(), j + 1);
+        map.insert(s[j], j + 1);
         j += 1;
     }
 
