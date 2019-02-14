@@ -66,7 +66,6 @@ impl MyHashSet {
 
 #[cfg(test)]
 mod tests {
-
     #[test]
     fn test1() {}
 }
