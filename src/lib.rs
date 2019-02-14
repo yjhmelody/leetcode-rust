@@ -38,6 +38,7 @@ pub mod open_the_lock;
 pub mod palindrome_number;
 pub mod pascal_triangle;
 pub mod perfect_squares;
+pub mod plus_one;
 pub mod remove_duplicates;
 pub mod remove_duplicates_2;
 pub mod remove_element;
