@@ -36,7 +36,6 @@ pub fn longest_palindrome(s: String) -> String {
         }
     }
 
-
     let temp = String::from_utf8(s).unwrap();
     String::from(&temp[final_i..=final_j])
 }

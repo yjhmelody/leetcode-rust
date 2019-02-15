@@ -47,6 +47,9 @@ mod tests {
 
         assert_eq!(longest_common_prefix(strs), String::from("fl"));
         assert_eq!(longest_common_prefix(vec![]), String::from(""));
-        assert_eq!(longest_common_prefix(vec![String::from("flower")]), String::from("flower"));
+        assert_eq!(
+            longest_common_prefix(vec![String::from("flower")]),
+            String::from("flower")
+        );
     }
 }
