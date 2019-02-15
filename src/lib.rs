@@ -19,6 +19,7 @@ pub mod find_peak_element;
 pub mod find_pivot_index;
 pub mod four_sum;
 pub mod four_sum_2;
+pub mod group_anagrams;
 pub mod happy_number;
 pub mod integer_to_roman;
 pub mod internal_list_intersections;
