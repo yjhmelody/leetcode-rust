@@ -2,6 +2,12 @@
 name = "leetcode-rust"
 version = "0.1.0"
 authors = ["yjhmelody <465402634@qq.com>"]
+keywords = ["LeetCode"]
+description = "Some solutions about leetcode in rust lang"
+homepage = "https://github.com/yjhmelody/leetcode-rust"
+readme = "README.md"
+repository = "https://github.com/yjhmelody/leetcode-rust"
+
 edition = "2018"
 
 [dependencies]
