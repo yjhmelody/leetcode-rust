@@ -56,6 +56,7 @@ pub mod sort_characters_by_frequency;
 pub mod sort_colors;
 pub mod sqrt_x;
 pub mod sum_of_even_numbers_after_queries;
+pub mod target_sum;
 pub mod three_sum;
 pub mod two_sum;
 pub mod two_sum_2;

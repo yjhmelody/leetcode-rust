@@ -72,24 +72,4 @@ mod tests {
             vec![vec!["eat", "tea", "ate"], vec!["tan", "nat"], vec!["bat"]]
         )
     }
-
-    #[test]
-    fn test2() {
-        let strs = vec![
-            "eat".to_string(),
-            "tea".to_string(),
-            "tan".to_string(),
-            "ate".to_string(),
-            "nat".to_string(),
-            "bat".to_string(),
-        ];
-
-        let res = group_anagrams2(strs);
-
-        // random order
-        // assert_eq!(
-        //   res,
-        //   vec![vec!["eat", "tea", "ate"], vec!["tan", "nat"], vec!["bat"]]
-        //)
-    }
 }
