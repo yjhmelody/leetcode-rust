@@ -17,9 +17,6 @@ pub fn three_sum(nums: Vec<i32>) -> Vec<Vec<i32>> {
         let mut k = j - 1;
         while i < k {
             let sum = nums[i] + nums[k];
-            if nums[j] == 1 {
-                println!("{} {} {}", nums[i], nums[k], nums[j]);
-            }
             if sum + nums[j] < 0 {
                 i += 1;
             } else if sum + nums[j] > 0 {

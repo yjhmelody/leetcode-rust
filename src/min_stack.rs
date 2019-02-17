@@ -42,7 +42,6 @@ impl MinStack {
     }
 
     fn _push(&mut self, x: i32) {
-        println!("{}", x);
         let mut node = StackNode { val: x, next: None };
         let next = self.top.take();
         node.next = next;

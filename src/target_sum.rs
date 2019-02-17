@@ -23,12 +23,13 @@ fn _find_target_sum_ways(nums: &Vec<i32>, index: usize, s: i32, sum: i32) -> i32
     }
 }
 
-// analysis and dp
-// sum(P) - sum(N) = target
-// sum(P) + sum(N) + sum(P) - sum(N) = target + sum(P) + sum(N)
-// 2 * sum(P) = target + sum(nums)
-// so, if target + sum(nums) is not even, return 0,
-// else get sum(P) ==  (target + sum(nums))/2
+/// analysis and dp
+/// sum(P) - sum(N) = target
+/// sum(P) + sum(N) + sum(P) - sum(N) = target + sum(P) + sum(N)
+/// 2 * sum(P) = target + sum(nums)
+/// so, if target + sum(nums) is not even, return 0,
+/// else get sum(P) ==  (target + sum(nums))/2
+// todo
 pub fn find_target_sum_ways2(nums: Vec<i32>, s: i32) -> i32 {
     unimplemented!()
 }
