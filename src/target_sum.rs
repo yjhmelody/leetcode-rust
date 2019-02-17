@@ -1,4 +1,6 @@
 #![allow(dead_code)]
+#![allow(unused_variables)]
+#![allow(unused_imports)]
 
 // dfs: O(2^n)
 pub fn find_target_sum_ways(nums: Vec<i32>, s: i32) -> i32 {
