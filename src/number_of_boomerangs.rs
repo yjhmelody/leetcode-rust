@@ -8,6 +8,9 @@ pub fn number_of_boomerangs(points: Vec<Vec<i32>>) -> i32 {
     let mut count: i32 = 0;
     for i in 0..points.len() {
         for j in 0..points.len() {
+            if i == j {
+                continue;
+            }
             let x_diff = points[i][0] - points[j][0];
             let y_diff = points[i][1] - points[j][1];
             let dis = x_diff * x_diff + y_diff * y_diff;

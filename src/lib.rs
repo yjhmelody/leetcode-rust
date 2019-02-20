@@ -33,6 +33,7 @@ pub mod largest_number_at_least_twice_of_others;
 pub mod length_of_longest_substring;
 pub mod longest_common_prefix;
 pub mod longest_palindrome;
+pub mod max_points_on_a_line;
 pub mod max_profit;
 pub mod merge_sorted_array;
 pub mod min_stack;
