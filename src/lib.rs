@@ -54,6 +54,7 @@ pub mod remove_duplicates_2;
 pub mod remove_element;
 pub mod reverse_integer;
 pub mod reverse_vowels_of_a_string;
+pub mod reverse_words_in_a_string_3;
 pub mod roman_to_integer;
 pub mod rotate_array;
 pub mod smallest_string_starting_from_leaf;
