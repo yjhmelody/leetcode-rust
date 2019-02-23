@@ -46,6 +46,7 @@ pub mod number_of_islands;
 pub mod open_the_lock;
 pub mod palindrome_number;
 pub mod pascal_triangle;
+pub mod pascal_triangle_2;
 pub mod perfect_squares;
 pub mod plus_one;
 pub mod remove_duplicates;
