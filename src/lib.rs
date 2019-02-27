@@ -1,6 +1,7 @@
 pub mod binary_tree;
 pub mod linked_list;
 
+pub mod add_binary;
 pub mod add_two_numbers;
 pub mod binary_search;
 pub mod binary_tree_inorder_traversal;
@@ -25,6 +26,7 @@ pub mod four_sum;
 pub mod four_sum_2;
 pub mod group_anagrams;
 pub mod happy_number;
+pub mod implement_str_str;
 pub mod integer_to_roman;
 pub mod internal_list_intersections;
 pub mod intersection_of_two_arrays;
@@ -77,4 +79,3 @@ pub mod valid_parentheses;
 pub mod validate_binary_search_tree;
 pub mod vertical_order_traversal_of_a_binary_tree;
 pub mod zigzag_conversion;
-pub mod add_binary;
