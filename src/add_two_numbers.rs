@@ -2,7 +2,7 @@
 
 use crate::linked_list::*;
 
-pub fn add_two_numbers2(
+pub fn add_two_numbers(
     l1: Option<Box<ListNode>>,
     l2: Option<Box<ListNode>>,
 ) -> Option<Box<ListNode>> {
@@ -45,7 +45,7 @@ pub fn add_two_numbers2(
 }
 
 // add two link lists by transfer them to vector firstly and then transfer them back to lists.
-pub fn add_two_numbers(
+pub fn add_two_numbers2(
     l1: Option<Box<ListNode>>,
     l2: Option<Box<ListNode>>,
 ) -> Option<Box<ListNode>> {

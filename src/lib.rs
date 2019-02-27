@@ -77,3 +77,4 @@ pub mod valid_parentheses;
 pub mod validate_binary_search_tree;
 pub mod vertical_order_traversal_of_a_binary_tree;
 pub mod zigzag_conversion;
+pub mod add_binary;
