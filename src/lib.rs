@@ -75,3 +75,4 @@ pub mod validate_binary_search_tree;
 pub mod vertical_order_traversal_of_a_binary_tree;
 pub mod zigzag_conversion;
 pub mod contains_duplicate_2;
+pub mod contains_duplicate_3;
