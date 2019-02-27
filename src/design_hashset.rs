@@ -11,6 +11,7 @@ pub struct MyHashSet {
 }
 
 impl MyHashSet {
+    /** Initialize your data structure here. */
     pub fn new() -> Self {
         let len: i32 = 2047;
         let bucket = iter::repeat(LinkedList::new())
@@ -37,6 +38,7 @@ impl MyHashSet {
         }
     }
 
+    /** Returns true if this set contains the specified element */
     #[inline]
     pub fn contains(&mut self, key: i32) -> bool {
         match self._find(key) {
@@ -66,6 +68,15 @@ impl MyHashSet {
 
 #[cfg(test)]
 mod tests {
+    use super::*;
+
     #[test]
-    fn test1() {}
+    fn test1() {
+        let mut obj = MyHashSet::new();
+        let key = 1;
+        obj.add(key);
+        obj.remove(key);
+        let ret: bool = obj.contains(key);
+        assert_eq!(ret, false);
+    }
 }
