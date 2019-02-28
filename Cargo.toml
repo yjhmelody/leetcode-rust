@@ -1,6 +1,6 @@
 [package]
 name = "leetcode-rust"
-version = "0.1.1"
+version = "0.1.2"
 authors = ["yjhmelody <465402634@qq.com>"]
 keywords = ["LeetCode"]
 description = "Some solutions about leetcode in rust lang"
