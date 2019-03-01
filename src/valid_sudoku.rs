@@ -6,7 +6,6 @@ pub fn is_valid_sudoku(board: Vec<Vec<char>>) -> bool {
     use std::iter;
     let mut col: Vec<HashSet<_>> = iter::repeat(HashSet::new()).take(board.len()).collect();
     let mut palaces: Vec<HashSet<_>> = iter::repeat(HashSet::new()).take(3).collect();
-    let mut count = 0;
     for i in 0..board.len() {
         let mut row = HashSet::new();
         if i % 3 == 0 {

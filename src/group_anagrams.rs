@@ -41,8 +41,8 @@ pub fn group_anagrams2(strs: Vec<String>) -> Vec<Vec<String>> {
                 hash[(b - b'a') as usize] += 1u8;
                 hash
             }))
-                .or_insert(vec![])
-                .push(s);
+            .or_insert(vec![])
+            .push(s);
             map
         })
         .into_iter()
