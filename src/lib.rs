@@ -91,3 +91,4 @@ pub mod valid_sudoku;
 pub mod validate_binary_search_tree;
 pub mod vertical_order_traversal_of_a_binary_tree;
 pub mod zigzag_conversion;
+pub mod sum_of_two_integers;
