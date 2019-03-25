@@ -3,8 +3,8 @@
 pub fn search(nums: Vec<i32>, target: i32) -> i32 {
     let mut i = 0i32;
     let mut j = nums.len() as i32 - 1;
-    let mut mid = (i + j) / 2;
     while i <= j {
+        let mid = (i + j) / 2;
         if nums[mid as usize] == target {
             return mid;
         } else if nums[mid as usize] > target {
@@ -12,9 +12,7 @@ pub fn search(nums: Vec<i32>, target: i32) -> i32 {
         } else {
             i = mid + 1;
         }
-        mid = (i + j) / 2;
     }
-
     -1
 }
 
